@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${msg}">表示される部分</h1>
+	<span th:text="1 > 10" ></span>
+	<span th:text="1 < 10" ></span>
+	<span th:text="1 >= 10" ></span>
+	<span th:text="1 >= 10" ></span>
+	<span th:text="1 != 10" ></span>
+	<p th:text="${name} == '太郎' ? '太郎さんです' : '太郎さんではありません'"></p>
+
+	<div th:if="${name} == '太郎'">
+		<p>太郎さんです</p>
+	</div>	
+	<div th:unless="${name} == '太郎'">
+		<p>太郎さんではありません</p>
+	</div>
+	
+	<div th:switch="${name}">
+		<p th:case="太郎" th:text="|${name}です|"></p>
+		<p th:case="次郎" th:text="|${name}です|"></p>
+		<p th:case="花子" th:text="|${name}です|"></p>
+		<p th:case="*">名簿にありません</p>	
+	</div>
+
+	<p th:text="${number}">0</p>
+
+	<p th:text="${mb.id}">0</p>
+	<p th:text="${mb.name}">太郎</p>
+
+	
+	<div th:object="${mb}">
+		<p th:text="*{id}">ID</p>
+		<p th:text="*{name}">名前</p>
+	</div>
+	
+	<p th:text="${list[0]}">方角</p>
+	<p th:text="${list[1]}">方角</p>
+	<p th:text="${list[2]}">方角</p>
+	<p th:text="${list[3]}">方角</p>
+	
+	<p th:text="${map.tanaka.name}">名前1</p>
+	<p th:text="${map.suzuki.name}">名前2</p>
+	
+	<div th:each="str, s : ${list}">
+		<p th:text="${str} + ':' + ${s.count}" th:style="${s.even} ? 'color:red' : 'color:blue'"></p>
+	</div>
+	
+</body>
+</html>
