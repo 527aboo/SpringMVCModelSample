@@ -4,7 +4,6 @@ public class Member {
 	
 	private int id;
 	private String name;
-	private String pass;
 		
 	public int getId() {
 		return id;
@@ -22,13 +21,4 @@ public class Member {
 		this.name = name;
 	}
 
-	public String getPass() {
-		return pass;
-	}
-
-	public void setPass(String pass) {
-		this.pass = pass;
-	}
-	
-	
 }
