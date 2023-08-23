@@ -45,4 +45,10 @@ public class HelloModelController {
 		model.addAttribute("map", map);
 		return "helloThymeleaf";
 	}
+	
+	@GetMapping("fragment")
+	public String fragmentView(Model model) {		
+		return "useThymeleaf";
+	}
+
 }
