@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Thymeleaf Sample</title>
+</head>
+<body>
+	<h1 th:text="'hello world'">表示する部分</h1>
+	<h1>こんにちは！[[${name}]]さん</h1>
+	<h1 th:text="'あしたは、' + '晴れ' +  'です。'">表示する部分</h1>
+
+	<div th:if="${name} == '太郎'">
+		<p>太郎さんです</p>
+		<p>太郎さんです</p>
+		<p><span id="bold">太郎</span>さんです</p>
+		<span>太郎さんです</span>
+		<span>太郎さんです</span>
+		<span>太郎さんです</span>
+	</div>
+	
+	<th:block th:if="${name} == '太郎'">
+		<p>太郎さんです</p>
+	</th:block>
+
+</body>
+</html>

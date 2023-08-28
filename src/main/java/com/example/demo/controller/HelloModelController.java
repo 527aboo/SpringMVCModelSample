@@ -35,7 +35,7 @@ public class HelloModelController {
 		
 		Map<String, Member> map = new HashMap<>();
 		map.put("tanaka", mb);
-		map.put("suzuki", mb2);		
+		map.put("suzuki", mb2);
 		
 		model.addAttribute("msg", "タイムリーフ");
 		model.addAttribute("name", "太郎");
