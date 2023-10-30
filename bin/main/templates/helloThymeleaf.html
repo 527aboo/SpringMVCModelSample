@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+				"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8">
+<meta  http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 </head>
 <body>
 	<h1 th:text="${msg}">表示される部分</h1>
-	<span th:text="1 > 10" ></span>
-	<span th:text="1 < 10" ></span>
-	<span th:text="1 >= 10" ></span>
-	<span th:text="1 >= 10" ></span>
-	<span th:text="1 != 10" ></span>
+	<div>
+		<span th:text="1 > 10" ></span>
+		<span th:text="1 < 10" ></span>
+		<span th:text="1 >= 10" ></span>
+		<span th:text="1 >= 10" ></span>
+		<span th:text="1 != 10" ></span>
+	</div>
 	<p th:text="${name} == '太郎' ? '太郎さんです' : '太郎さんではありません'"></p>
 
 	<div th:if="${name} == '太郎'">
@@ -55,7 +58,6 @@
 		<br />
 		<span th:text="${#numbers.formatDecimal(y, 3, 'COMMA', 2, 'POINT')}"></span><br />
 	</div>
-	
 	
 </body>
 </html>
